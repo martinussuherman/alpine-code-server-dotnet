@@ -7,19 +7,28 @@ ENV LABEL_MAINTAINER="Martinus Suherman" \
     LABEL_VCS_URL="https://github.com/martinussuherman/alpine-tz-ep-code-server-net-sdk-31" \
     LABEL_DESCRIPTION="Alpine Linux based image of code-server bundled with .NET Core SDK and some utilities" \
     LABEL_LICENSE="GPL-3.0" \
-    # container/su-exec UID \
+    # container/su-exec UID 
     EUID=1001 \
-    # container/su-exec GID \
+    # container/su-exec GID 
     EGID=1001 \
-    # additional directories to create + chown (space separated) \
+    # additional directories to create + chown (space separated) 
     ECHOWNDIRS= \
-    # additional files to create + chown (space separated) \
+    # additional files to create + chown (space separated) 
     ECHOWNFILES= \
-    DOTNET_ROOT=/usr/share/dotnet
+    # Enable detection of running in a container
+    DOTNET_RUNNING_IN_CONTAINER=true \
+    # Enable correct mode for dotnet watch (only mode supported in a container)
+    DOTNET_USE_POLLING_FILE_WATCHER=true \
+    LC_ALL=en_US.UTF-8 \
+    LANG=en_US.UTF-8
 
 RUN apk --no-cache --update add \
+    ca-certificates \
+    \
+    # .NET Core dependencies
     icu-libs \
     krb5-libs \
+    libgcc \
     libintl \
     libssl1.1 \
     libstdc++ \ 
@@ -27,14 +36,17 @@ RUN apk --no-cache --update add \
     numactl \
     zlib
 
-WORKDIR /tmp
-
-RUN wget https://download.visualstudio.microsoft.com/download/pr/041277e6-2759-47a0-b990-e15b564c2485/6156fb738728ffe2f226c431739584d5/dotnet-sdk-3.1.300-linux-musl-x64.tar.gz && \
-    mkdir dotnet && \
-    tar x -C dotnet -zf dotnet-sdk-3.1.300-linux-musl-x64.tar.gz && \
-    rm dotnet-sdk-3.1.300-linux-musl-x64.tar.gz && \
-    mv dotnet /usr/share && \
-    ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet 
+# Install .NET Core SDK
+RUN dotnet_sdk_version=3.1.302 \
+    && wget -O dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/$dotnet_sdk_version/dotnet-sdk-$dotnet_sdk_version-linux-musl-x64.tar.gz \
+    && dotnet_sha512='ba6731051604b141c9a18e8d52eca383089aa524c07eb74e84acaa55334703a6636a054bea7c644b28f39a57fd19547ad92459415e4d25a85bb6ab3ff4046a19' \
+    && echo "$dotnet_sha512  dotnet.tar.gz" | sha512sum -c - \
+    && mkdir -p /usr/share/dotnet \
+    && tar -C /usr/share/dotnet -oxzf dotnet.tar.gz \
+    && ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet \
+    && rm dotnet.tar.gz \
+    # Trigger first run experience by running arbitrary cmd
+    && dotnet help
 
 #
 ARG LABEL_VERSION="latest"
