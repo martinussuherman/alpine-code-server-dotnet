@@ -1,4 +1,4 @@
-FROM martinussuherman/alpine-code-server:3.9.0-alpine3.12
+FROM martinussuherman/alpine-code-server:3.9.1-alpine3.12
 
 ENV \
    # Enable correct mode for dotnet watch (only mode supported in a container)
@@ -21,9 +21,9 @@ RUN \
    zlib
 
 RUN \
-   dotnet_sdk_version=5.0.103 \
+   dotnet_sdk_version=5.0.201 \
    && wget -O dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/$dotnet_sdk_version/dotnet-sdk-$dotnet_sdk_version-linux-musl-x64.tar.gz \
-   && dotnet_sha512='0bb6fc1aa4b8486b437f28baeda3b810f7c38ef195761a5eb4c5236975efc505dbff7abbdf7549a34278d110c8a7cf283e52f033a404b300e0f96a8ae0fca4a8' \
+   && dotnet_sha512='46341b38fb4fd3faff66ce74e24063d7fd189de6d5ed12ee2bdcea11cefbb1edf1ed3984df87a11f5222cf3d79aceaede7402650ff09a964a2e8b81c7bd4bf08' \
    && echo "$dotnet_sha512  dotnet.tar.gz" | sha512sum -c - \
    && mkdir -p /usr/share/dotnet \
    && tar -oxzf dotnet.tar.gz -C /usr/share/dotnet \
