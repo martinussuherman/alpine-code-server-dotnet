@@ -1,5 +1,21 @@
 # alpine-code-server-dotnet
 
+![GitHub](https://img.shields.io/github/license/martinussuherman/alpine-code-server-dotnet) ![Docker Pulls](https://img.shields.io/docker/pulls/martinussuherman/alpine-code-server-dotnet) ![Docker Stars](https://img.shields.io/docker/stars/martinussuherman/alpine-code-server-dotnet)
+
+[![From Alpine](https://img.shields.io/badge/FROM-martinussuherman/alpine--code--server-brightgreen.svg)](https://hub.docker.com/r/martinussuherman/alpine-code-server)
+
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/latest-net3.1) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/latest-net3.1)
+
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/latest-net5.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/latest-net5.0)
+
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/latest-net6.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/latest-net6.0)
+
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.0-net3.1) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.0-net3.1)
+
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.0-net5.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.0-net5.0)
+
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.0-net6.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.0-net6.0)
+
 ---
 
 ## What is this image for ?
