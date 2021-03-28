@@ -10,11 +10,11 @@
 
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/latest-net6.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/latest-net6.0)
 
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.0-net3.1) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.0-net3.1)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.1-net3.1) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.1-net3.1)
 
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.0-net5.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.0-net5.0)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.1-net5.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.1-net5.0)
 
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.0-net6.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.0-net6.0)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine-code-server-dotnet/3.9.1-net6.0) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine-code-server-dotnet/3.9.1-net6.0)
 
 ---
 
