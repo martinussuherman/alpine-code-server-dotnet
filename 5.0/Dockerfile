@@ -1,4 +1,4 @@
-FROM martinussuherman/alpine-code-server:3.9.2-alpine3.12-amd64
+FROM martinussuherman/alpine-code-server:3.10.0-alpine3.12-amd64
 
 ENV \
    # Enable correct mode for dotnet watch (only mode supported in a container)
