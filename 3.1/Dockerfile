@@ -21,9 +21,9 @@ RUN \
    zlib
 
 RUN \
-   dotnet_sdk_version=3.1.407 \
+   dotnet_sdk_version=3.1.415 \
    && wget -O dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/$dotnet_sdk_version/dotnet-sdk-$dotnet_sdk_version-linux-musl-x64.tar.gz \
-   && dotnet_sha512='d389ae56be3dabcceeff9be81239e3da4e914fab0aa77ae7d36bc645fedb32e6193c6bc1e0412aa5081a5804a48d99acbcf6bc501f2f2739fbd3fe0d199eb8c6' \
+   && dotnet_sha512='20297eb436db2fe0cb3d8edfe4ad5b7c7871116616843314830533471a344f0ca943fbc5f92685113afc331a64c90f271245a36be1c232c364add936dd06d13d' \
    && echo "$dotnet_sha512  dotnet.tar.gz" | sha512sum -c - \
    && mkdir -p /usr/share/dotnet \
    && tar -oxzf dotnet.tar.gz -C /usr/share/dotnet \
