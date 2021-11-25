@@ -30,7 +30,7 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: martinussuherman/alpine-code-server-dotnet:3.11.1-net3.1, martinussuherman/alpine-code-server-dotnet:latest-net3.1
+          tags: martinussuherman/alpine-code-server-dotnet:3.12.0-net3.1, martinussuherman/alpine-code-server-dotnet:latest-net3.1
 
       - name: Build and push .Net 5.0 amd64 image
         uses: docker/build-push-action@v2
@@ -39,7 +39,7 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: martinussuherman/alpine-code-server-dotnet:3.11.1-net5.0, martinussuherman/alpine-code-server-dotnet:latest-net5.0
+          tags: martinussuherman/alpine-code-server-dotnet:3.12.0-net5.0, martinussuherman/alpine-code-server-dotnet:latest-net5.0
 
       - name: Build and push .Net 6.0 amd64 image
         uses: docker/build-push-action@v2
@@ -48,4 +48,4 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: martinussuherman/alpine-code-server-dotnet:3.11.1-net6.0, martinussuherman/alpine-code-server-dotnet:latest-net6.0, martinussuherman/alpine-code-server-dotnet:latest
+          tags: martinussuherman/alpine-code-server-dotnet:3.12.0-net6.0, martinussuherman/alpine-code-server-dotnet:latest-net6.0, martinussuherman/alpine-code-server-dotnet:latest
