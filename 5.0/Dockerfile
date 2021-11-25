@@ -1,5 +1,5 @@
 # buildkit bug workaround - https://github.com/moby/buildkit/issues/1368
-FROM martinussuherman/alpine-code-server:3.10.2-alpine3.12-amd64
+FROM martinussuherman/alpine-code-server:3.11.1-alpine3.13-amd64
 
 ENV \
    # Enable correct mode for dotnet watch (only mode supported in a container)
